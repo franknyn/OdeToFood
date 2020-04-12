@@ -17,3 +17,12 @@ dotnet ef dbcontext info -s ../OdeToFood/OdeToFood.csproj
 dotnet ef migrations add initialcreate -s ../OdeToFood/OdeToFood.csproj
 dotnet ef database update -s ../OdeToFood/OdeToFood.csproj
 ```
+
+Alternatively, install this extension https://github.com/mrward/monodevelop-nuget-extensions
+and add Microsoft.EntityFrameworkCore.Tools (it will include Microsoft.EntityFrameworkCore.Design) to OdeToFood/OdeToFood project (executable project).
+
+Open View > Pads > Package Manager Console, then run
+```
+get-help entityframework
+Add-Migration initialcreate
+```
